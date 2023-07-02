@@ -7,6 +7,11 @@ import MovieList from "../movie-list/Movie-list";
 import MoviesAddForm from "../movies-add-form/Movies-add-form";
 
 const App = () => {
+  const data = [
+    { name: "Empire of osman", viewers: "988" },
+    { name: "Ertugrul", viewers: "789" },
+    { name: "Osman", viewers: "1091" },
+  ];
   return (
     <div className="app font-monospace">
       <div className="content">
@@ -15,7 +20,7 @@ const App = () => {
           <SearchPanel />
           <AppFiltr />
         </div>
-        <MovieList />
+        <MovieList data={data} />
         <MoviesAddForm />
       </div>
     </div>

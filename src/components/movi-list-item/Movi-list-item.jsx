@@ -1,14 +1,14 @@
 import React from "react";
 import "./Movi-list-item.css";
 
-const MoviListItem = () => {
+const MoviListItem = ({ name, viewers }) => {
   return (
     <li className="list-group-item d-flex justify-content-between">
-      <span className="list-group-item-label">Empire of Osman</span>
+      <span className="list-group-item-label">{name}</span>
       <input
         type="number"
         className="list-group-item-input"
-        defaultValue={989}
+        defaultValue={viewers}
       />
       <div className="d-flex justify-content-center align-items-center">
         <button type="button" className="btn-cookie btn-sm">
