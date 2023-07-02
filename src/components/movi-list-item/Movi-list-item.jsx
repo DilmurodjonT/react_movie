@@ -1,9 +1,13 @@
 import React from "react";
 import "./Movi-list-item.css";
 
-const MoviListItem = ({ name, viewers }) => {
+const MoviListItem = ({ name, viewers, favourite }) => {
   return (
-    <li className="list-group-item d-flex justify-content-between">
+    <li
+      className={`list-group-item d-flex justify-content-between ${
+        favourite && "favourite"
+      }`}
+    >
       <span className="list-group-item-label">{name}</span>
       <input
         type="number"

@@ -4,11 +4,15 @@ import MoviListItem from "../movi-list-item/Movi-list-item";
 
 const MovieList = ({ data }) => {
   return (
-    <div className="movie-list">
+    <ul className="movie-list">
       {data.map((item) => (
-        <MoviListItem name={item.name} viewers={item.viewers} />
+        <MoviListItem
+          name={item.name}
+          viewers={item.viewers}
+          favourite={item.favourite}
+        />
       ))}
-    </div>
+    </ul>
   );
 };
 
